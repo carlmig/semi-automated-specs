@@ -1,0 +1,13 @@
+%% C4 Container — fill in via the `architecture` skill
+C4Container
+    title Container Diagram — <system name>
+
+    Person(user, "User")
+
+    Container(web, "Web App", "<technology>", "User interface")
+    Container(api, "API", "<technology>", "Business logic")
+    ContainerDb(db, "Database", "<technology>", "Stores the system's data")
+
+    Rel(user, web, "Uses", "HTTPS")
+    Rel(web, api, "Calls", "HTTPS/JSON")
+    Rel(api, db, "Reads/writes", "SQL")

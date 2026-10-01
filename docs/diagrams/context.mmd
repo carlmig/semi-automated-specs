@@ -1,0 +1,10 @@
+%% C4 System Context — fill in via the `architecture` skill
+C4Context
+    title System Context — <system name>
+
+    Person(user, "User", "Description of the main user")
+    System(system, "<System Name>", "Brief description of the system")
+    System_Ext(ext, "<External System>", "Description of the external integration")
+
+    Rel(user, system, "Uses")
+    Rel(system, ext, "Integrates with")
